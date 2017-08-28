@@ -1,0 +1,103 @@
+# Project: gunjin
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = sources/DXNetwork.o sources/Field.o sources/FieldView.o sources/GameMgr.o sources/Judge.o sources/juegeView.o sources/Koma.o sources/main.o sources/Messenger.o sources/test.o sources/formObject/Button.o sources/input/Key.o sources/input/Mouse.o sources/MVCBase/MVCControlerBase.o sources/MVCBase/MVCViewBase.o sources/LocalMessenger.o sources/formObject/DXImage.o sources/scenes/Title/TitleScene.o sources/scenes/Title/TitleView.o sources/scenes/Game/GameMgr.o sources/scenes/Game/Player.o sources/scenes/Game/PlayerControler.o sources/scenes/Game/PlayerView.o sources/scenes/PassDataMap.o sources/scenes/SceneMgr.o sources/scenes/Game/GameScene.o
+LINKOBJ  = sources/DXNetwork.o sources/Field.o sources/FieldView.o sources/GameMgr.o sources/Judge.o sources/juegeView.o sources/Koma.o sources/main.o sources/Messenger.o sources/test.o sources/formObject/Button.o sources/input/Key.o sources/input/Mouse.o sources/MVCBase/MVCControlerBase.o sources/MVCBase/MVCViewBase.o sources/LocalMessenger.o sources/formObject/DXImage.o sources/scenes/Title/TitleScene.o sources/scenes/Title/TitleView.o sources/scenes/Game/GameMgr.o sources/scenes/Game/Player.o sources/scenes/Game/PlayerControler.o sources/scenes/Game/PlayerView.o sources/scenes/PassDataMap.o sources/scenes/SceneMgr.o sources/scenes/Game/GameScene.o
+LIBS     = -L"C:/DXLib_GCC" -L"C:/Program Files/Dev-Cpp/mingw32/lib" -L"C:/Program Files/Dev-Cpp/mingw32/i686-w64-mingw32/lib" -static-libgcc -static-libstdc++ -mwindows -lDxLib -lDxUseCLib -lDxDrawFunc -ljpeg -lpng -lzlib -ltiff -ltheora_static -lvorbis_static -lvorbisfile_static -logg_static -lbulletdynamics -lbulletcollision -lbulletmath -lopusfile -lopus -lsilk_common -lcelt
+INCS     = -I"C:/Program Files/Dev-Cpp/mingw32/include" -I"C:/Program Files/Dev-Cpp/mingw32/i686-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/mingw32/lib/gcc/i686-w64-mingw32/5.2.0/include"
+CXXINCS  = -I"C:/DXLib_GCC" -I"C:/Program Files/Dev-Cpp/mingw32/include" -I"C:/Program Files/Dev-Cpp/mingw32/i686-w64-mingw32/include" -I"C:/Program Files/Dev-Cpp/mingw32/lib/gcc/i686-w64-mingw32/5.2.0/include"
+BIN      = gunjin.exe
+CXXFLAGS = $(CXXINCS) -DDX_GCC_COMPILE -DDX_NON_INLINE_ASM
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+sources/DXNetwork.o: sources/DXNetwork.cpp
+	$(CPP) -c sources/DXNetwork.cpp -o sources/DXNetwork.o $(CXXFLAGS)
+
+sources/Field.o: sources/Field.cpp
+	$(CPP) -c sources/Field.cpp -o sources/Field.o $(CXXFLAGS)
+
+sources/FieldView.o: sources/FieldView.cpp
+	$(CPP) -c sources/FieldView.cpp -o sources/FieldView.o $(CXXFLAGS)
+
+sources/GameMgr.o: sources/GameMgr.cpp
+	$(CPP) -c sources/GameMgr.cpp -o sources/GameMgr.o $(CXXFLAGS)
+
+sources/Judge.o: sources/Judge.cpp
+	$(CPP) -c sources/Judge.cpp -o sources/Judge.o $(CXXFLAGS)
+
+sources/juegeView.o: sources/juegeView.cpp
+	$(CPP) -c sources/juegeView.cpp -o sources/juegeView.o $(CXXFLAGS)
+
+sources/Koma.o: sources/Koma.cpp
+	$(CPP) -c sources/Koma.cpp -o sources/Koma.o $(CXXFLAGS)
+
+sources/main.o: sources/main.cpp
+	$(CPP) -c sources/main.cpp -o sources/main.o $(CXXFLAGS)
+
+sources/Messenger.o: sources/Messenger.cpp
+	$(CPP) -c sources/Messenger.cpp -o sources/Messenger.o $(CXXFLAGS)
+
+sources/test.o: sources/test.cpp
+	$(CPP) -c sources/test.cpp -o sources/test.o $(CXXFLAGS)
+
+sources/formObject/Button.o: sources/formObject/Button.cpp
+	$(CPP) -c sources/formObject/Button.cpp -o sources/formObject/Button.o $(CXXFLAGS)
+
+sources/input/Key.o: sources/input/Key.cpp
+	$(CPP) -c sources/input/Key.cpp -o sources/input/Key.o $(CXXFLAGS)
+
+sources/input/Mouse.o: sources/input/Mouse.cpp
+	$(CPP) -c sources/input/Mouse.cpp -o sources/input/Mouse.o $(CXXFLAGS)
+
+sources/MVCBase/MVCControlerBase.o: sources/MVCBase/MVCControlerBase.cpp
+	$(CPP) -c sources/MVCBase/MVCControlerBase.cpp -o sources/MVCBase/MVCControlerBase.o $(CXXFLAGS)
+
+sources/MVCBase/MVCViewBase.o: sources/MVCBase/MVCViewBase.cpp
+	$(CPP) -c sources/MVCBase/MVCViewBase.cpp -o sources/MVCBase/MVCViewBase.o $(CXXFLAGS)
+
+sources/LocalMessenger.o: sources/LocalMessenger.cpp
+	$(CPP) -c sources/LocalMessenger.cpp -o sources/LocalMessenger.o $(CXXFLAGS)
+
+sources/formObject/DXImage.o: sources/formObject/DXImage.cpp
+	$(CPP) -c sources/formObject/DXImage.cpp -o sources/formObject/DXImage.o $(CXXFLAGS)
+
+sources/scenes/Title/TitleScene.o: sources/scenes/Title/TitleScene.cpp
+	$(CPP) -c sources/scenes/Title/TitleScene.cpp -o sources/scenes/Title/TitleScene.o $(CXXFLAGS)
+
+sources/scenes/Title/TitleView.o: sources/scenes/Title/TitleView.cpp
+	$(CPP) -c sources/scenes/Title/TitleView.cpp -o sources/scenes/Title/TitleView.o $(CXXFLAGS)
+
+sources/scenes/Game/GameMgr.o: sources/scenes/Game/GameMgr.cpp
+	$(CPP) -c sources/scenes/Game/GameMgr.cpp -o sources/scenes/Game/GameMgr.o $(CXXFLAGS)
+
+sources/scenes/Game/Player.o: sources/scenes/Game/Player.cpp
+	$(CPP) -c sources/scenes/Game/Player.cpp -o sources/scenes/Game/Player.o $(CXXFLAGS)
+
+sources/scenes/Game/PlayerControler.o: sources/scenes/Game/PlayerControler.cpp
+	$(CPP) -c sources/scenes/Game/PlayerControler.cpp -o sources/scenes/Game/PlayerControler.o $(CXXFLAGS)
+
+sources/scenes/Game/PlayerView.o: sources/scenes/Game/PlayerView.cpp
+	$(CPP) -c sources/scenes/Game/PlayerView.cpp -o sources/scenes/Game/PlayerView.o $(CXXFLAGS)
+
+sources/scenes/PassDataMap.o: sources/scenes/PassDataMap.cpp
+	$(CPP) -c sources/scenes/PassDataMap.cpp -o sources/scenes/PassDataMap.o $(CXXFLAGS)
+
+sources/scenes/SceneMgr.o: sources/scenes/SceneMgr.cpp
+	$(CPP) -c sources/scenes/SceneMgr.cpp -o sources/scenes/SceneMgr.o $(CXXFLAGS)
+
+sources/scenes/Game/GameScene.o: sources/scenes/Game/GameScene.cpp
+	$(CPP) -c sources/scenes/Game/GameScene.cpp -o sources/scenes/Game/GameScene.o $(CXXFLAGS)
